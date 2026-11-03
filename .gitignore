@@ -1,0 +1,8 @@
+camera_snap.jpg
+cam_v36/
+*.bin
+.pio/
+.vscode/
+D:\
+build/
+**/panel_build/
