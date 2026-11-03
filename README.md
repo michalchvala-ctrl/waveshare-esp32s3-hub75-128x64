@@ -69,7 +69,17 @@ dma->setLatBlanking(8);
 - Built-in `FOUR_SCAN_64` + various `pixelBase` values → colors sometimes OK, geometry still wrong.
 - Flipping the double-buffer **as fast as possible** during scroll → heavy flicker. Cap ~30 FPS or use ~25–50 ms delay between frames.
 
-## Example sketch
+## Wi-Fi firmware (live data, no reflash)
+
+See [`panel_wifi/`](panel_wifi/): NTP clock on the panel + HTTP JSON API for a separate web UI.
+
+- First boot: join AP **`LEDPanel-Setup`** (or put `WIFI_SSID` / `WIFI_PASS` in `config.h`)
+- Then open `http://<ip>/` or `http://ledpanel.local/`
+- `POST /api/notify` — show text without uploading a new sketch
+- `POST /api/brightness` — `auto` (day/night curve) or `manual` 0–255
+- `GET /api/status` — IP, time, brightness, mode
+
+## Demo sketch
 
 See [`panel_test_128x64/panel_test_128x64.ino`](panel_test_128x64/panel_test_128x64.ino):
 
