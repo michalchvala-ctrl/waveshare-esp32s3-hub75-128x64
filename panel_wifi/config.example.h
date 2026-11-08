@@ -13,5 +13,10 @@
 #define BRIGHTNESS_DEFAULT 70
 
 // Timezone: CET/CEST (Slovakia). Change if needed.
-#define NTP_TZ "CET-1CEST,M3.5.0,M10.5.0/3"
+// POSIX TZ for Slovakia / EU: CET (UTC+1) / CEST (UTC+2)
+#define NTP_TZ "CET-1CEST,M3.5.0/2,M10.5.0/3"
 #define NTP_SERVER "pool.ntp.org"
+
+// Shared secret with the LAN hub (Authorization: Bearer …)
+// Must match the panel token stored in the hub DB.
+#define API_TOKEN "ledpanel-dev-token"

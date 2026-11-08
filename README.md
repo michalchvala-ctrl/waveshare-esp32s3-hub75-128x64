@@ -69,6 +69,16 @@ dma->setLatBlanking(8);
 - Built-in `FOUR_SCAN_64` + various `pixelBase` values → colors sometimes OK, geometry still wrong.
 - Flipping the double-buffer **as fast as possible** during scroll → heavy flicker. Cap ~30 FPS or use ~25–50 ms delay between frames.
 
+## LAN Hub (multi-user web)
+
+See [`hub/`](hub/): Next.js app for LAN control (login, panel registry, admin notify strip).
+
+```bash
+cd hub && npm install && npm run dev
+```
+
+Open http://localhost:3000 — `admin` / `admin`. Internet/Nginx later; MVP is LAN-only.
+
 ## Wi-Fi firmware (live data, no reflash)
 
 See [`panel_wifi/`](panel_wifi/): NTP clock on the panel + HTTP JSON API for a separate web UI.

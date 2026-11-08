@@ -7,3 +7,8 @@ D:\
 build/
 **/panel_build/
 **/config.h
+hub/data/
+hub/node_modules/
+hub/.next/
+hub/.env
+hub/.env.local
